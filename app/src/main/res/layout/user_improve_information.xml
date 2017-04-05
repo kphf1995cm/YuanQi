@@ -4,9 +4,12 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+
+
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:paddingTop="20dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -14,7 +17,9 @@
             android:textSize="25dp"
             android:layout_weight="1"
             android:textStyle="bold"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/textView" />
+
         <RadioButton
             android:id="@+id/user_sex_boy"
             android:layout_width="wrap_content"
@@ -65,11 +70,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
-        <Button
-            android:id="@+id/interest_3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -84,6 +84,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/interest_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
         <Button
             android:id="@+id/interest_6"
             android:layout_width="wrap_content"

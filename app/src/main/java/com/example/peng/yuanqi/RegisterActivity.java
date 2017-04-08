@@ -47,19 +47,6 @@ public class RegisterActivity extends AppCompatActivity {
         nextStep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
-                if (isTheNameExist(userName.getText().toString(), serverUrl)) {
-                    Toast.makeText(RegisterActivity.this, "该昵称已被使用", Toast.LENGTH_LONG).show();
-                } else {
-                    if (isPasswordSame(userInputPassword.getText().toString(), userConfirmPassword.getText().toString()) == false) {
-                        Toast.makeText(RegisterActivity.this, "两次密码输入不一致", Toast.LENGTH_LONG).show();
-                    } else {
-                        importUserAccountPassInfo(userName.getText().toString(), userInputPassword.getText().toString(), serverUrl);
-                        Intent intent = new Intent(RegisterActivity.this, UserInfoCompleteActivity.class);
-                        startActivity(intent);
-                    }
-                }
-=======
                 //if (isTheNameExist(userName.getText().toString(), serverUrl)) {
                //     Toast.makeText(RegisterActivity.this, "该昵称已被使用", Toast.LENGTH_LONG).show();
                // } else {
@@ -71,37 +58,22 @@ public class RegisterActivity extends AppCompatActivity {
                     setContentView(R.layout.user_improve_information);
                 }
                // }
->>>>>>> dev
             }
         });
     }
 
     //判断账号是否存在，调数据库
-<<<<<<< HEAD
-    private boolean isTheNameExist(String string, URL url) {
-        return false;
-    }
-
-    ;
-
-=======
     private String getUserAccount(URL url)//获取用户的账号
     {
         String account="000000";
         return account;
     }
-
->>>>>>> dev
     private boolean isPasswordSame(String str1, String str2) {
         return str1.compareTo(str2) == 0;
     }
 
     //将用户账号及密码导入数据库
-<<<<<<< HEAD
-    private void importUserAccountPassInfo(String account, String password, URL url) {
-=======
     private void importUserInfo(String account, String name,String password, URL url) {
->>>>>>> dev
     }
 
     private View.OnClickListener listener = new View.OnClickListener() {

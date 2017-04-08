@@ -5,8 +5,6 @@ package com.example.peng.yuanqi;
  */
 
 import android.media.Image;
-
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 

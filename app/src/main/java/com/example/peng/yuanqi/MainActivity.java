@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     EditText userPassword = null;
     Button logIn = null;
     Button register = null;
+    public static User loginUser=new User();
 
     //public Drawable getLocalDrawable()｛
     //    ImageView imageView=(ImageView)findViewById(R.id.user_header);
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         return 0;
     }
 
-    ;//检测用户账号和密码是否存在及匹配,返回0，成功，1，账号不存在，2，密码错误
+    //检测用户账号和密码是否存在及匹配,返回0，成功，1，账号不存在，2，密码错误
 
     public boolean isNetworkConnected(Context context) {
         //if (context != null) {
@@ -73,11 +74,15 @@ public class MainActivity extends AppCompatActivity {
                 logIn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        loginResult = testUserAccountAndPassword(serverUrl, userAccount.getText().toString(), userPassword.getText().toString());
+                        loginResult = testUserAccountAndPassword(serverUrl, userAccount.getText().toString(), userPassword.getText().toString());//需要更改
                         if (loginResult == 0) {
+
+                            loginUser.setAccount(userAccount.getText().toString());
+                            loginUser.setPassword(userPassword.getText().toString());
+                            userCurState = 1;//修改用户状态，已登录
                             Intent intent = new Intent(MainActivity.this, UserDailyActivity.class);
                             startActivity(intent);
-                            userCurState = 1;//修改用户状态，已登录
+
                         } else {
                             if (loginResult == 1)//账号不存在
                             {

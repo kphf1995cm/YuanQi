@@ -41,8 +41,11 @@ public interface LinkWeb {
 
 
 
-    public HashSet<String> getUserFriendList(URL url,String account); //获取用户朋友列表
-    public void AddUserFriendList(URL url,String account,String friend_account);//用户的朋友列表里面增加一项内容
+    public ArrayList<FriendInfo> getUserFriendList(URL url,String account); //获取用户朋友列表
+    public void AddUserFriendList(URL url,String account,FriendInfo friend);//用户的朋友列表里面增加一项内容
     public void DeleteUserFriendItem(URL url,String account,String friend_account);//在用户的朋友列表里面删除一项内容
+
+    public User getUserInfo(URL url,String account);//获取用户的所有信息
+
 
 }

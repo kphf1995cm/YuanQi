@@ -1,5 +1,7 @@
 package com.example.peng.yuanqi;
 
+import android.media.Image;
+
 import java.util.ArrayList;
 
 /**
@@ -9,11 +11,12 @@ import java.util.ArrayList;
 public class DynamicContent {
     public String account=null;
     public String name=null;
-    public ArrayList<String> content;
+    public String content;
+    public String time=null;
+    public Image header=null;
     public int likePersonNum=0;
     public ArrayList<String> likePersonAccount;
     DynamicContent(){
-        content=new ArrayList<String>();
         likePersonAccount=new ArrayList<String>();
     }
 }

@@ -12,17 +12,26 @@ import java.util.HashSet;
  * Created by CloudsRosy on 2017/4/5.
  */
 public class User {
+    private String account=null;
     private String name=null;
     private Image header=null;
     private String password=null;
     private HashSet<String> interset_list;
-    private HashSet<String> friend_list;
+    private ArrayList<FriendInfo> friend_list;
     private ArrayList<DynamicContent> content_list;
     User()
     {
         interset_list=new HashSet<String>();
-        friend_list=new HashSet<String>();
+        friend_list=new ArrayList<FriendInfo>();
         content_list=new ArrayList<DynamicContent>();
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
+    }
+
+    public String getAccount() {
+        return account;
     }
 
     public void setName(String name) {
@@ -63,11 +72,11 @@ public class User {
         interset_list.remove(interest);
     }
 
-    public HashSet<String> getFriend_list() {
+    public ArrayList<FriendInfo> getFriend_list() {
         return friend_list;
     }
 
-    public void AddUserFriendList(String friend)
+    public void AddUserFriendList(FriendInfo friend)
     {
         friend_list.add(friend);
     }

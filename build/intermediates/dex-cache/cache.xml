@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e079c10713d5557aaf5611ddb8d70a4355746311">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_56e272d5fe8c7414b4068cf0207b7b8052f49dd1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_34f05e6cc54504c073e236e50e8b86401710d339\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_93fd05886a4342e42fc73e5a10b751706f30741b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.0.1_8aa476f63aaef611db028e295a895f857ca05de8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\SoftwareData\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_8fad2d84819d263c26ec70dd56ee5a2617d115cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_4919e480b0b4162f05edc49b30d03d7ecc497f69\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.0.1_2a71affec516330587966401288e7a0ed6247851\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_efe1753cc53ecd22ef31f003e4fb43a947f5005d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_6573f8e7d0c0d5b8f9fb1a4082c6629d5602ad6c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_a54e2260f972c9d1e3a8c5a090a7fd2ab6e6c63a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="27d1ce58ffac60a66efc717af8910946a163956a">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eeca5c9bf7d9725c5c2bfc9319b60c382af5e072\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_7af4c58c169deffb3908800a2c8c832732ed108f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_630d59e4907a88fd1c25b0f6f13f36b80db48259\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_faf9c1f6def52b0e4fbc20c587f07ffadbcab218\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_64e1ab064e6c584facb240b669142bbeba7fe1d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_ffb9876d1e506266eb49a50f35ee8969ca699479\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_8fa25064df653c4a0566b0c54c9f520bd6b3ebc4\classes.dex" />
+    </item>
+
+</items>

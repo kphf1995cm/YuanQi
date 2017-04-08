@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -49,6 +50,14 @@
         android:layout_height="50dp"
         android:paddingTop="10dp"
         android:text="添加你的兴趣"
+=======
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:paddingTop="10dp"
+        android:text="Make everything simple"
+>>>>>>> dev
         android:textSize="25dp"
         android:gravity="center"/>
     <LinearLayout
@@ -59,14 +68,26 @@
             android:id="@+id/interest_1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+<<<<<<< HEAD
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_2"
+=======
+            android:text="健身"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/interest_2"
+            android:text="跑步"
+>>>>>>> dev
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_3"
+<<<<<<< HEAD
+=======
+            android:text="游泳"
+>>>>>>> dev
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
@@ -76,18 +97,36 @@
         android:layout_height="45dp">
         <Button
             android:id="@+id/interest_4"
+<<<<<<< HEAD
+=======
+            android:text="篮球"
+>>>>>>> dev
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_5"
+<<<<<<< HEAD
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
+=======
+            android:text="网球"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+
+>>>>>>> dev
         <Button
             android:id="@+id/interest_6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+            android:text="羽毛球"
+>>>>>>> dev
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -97,16 +136,28 @@
             android:id="@+id/interest_7"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+            android:text="旅游"
+>>>>>>> dev
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+            android:text="音乐"
+>>>>>>> dev
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_9"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+            android:text="美术"
+>>>>>>> dev
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -116,24 +167,44 @@
             android:id="@+id/interest_10"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
+            android:text="自习"
+>>>>>>> dev
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_11"
             android:layout_width="wrap_content"
+<<<<<<< HEAD
+=======
+            android:text="设计"
+>>>>>>> dev
             android:layout_height="match_parent"
             android:layout_weight="1"/>
         <Button
             android:id="@+id/interest_12"
             android:layout_width="wrap_content"
+<<<<<<< HEAD
+=======
+            android:text="程序"
+>>>>>>> dev
             android:layout_height="match_parent"
             android:layout_weight="1"/>
     </LinearLayout>
     <Button
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="40dp"
+>>>>>>> dev
         android:paddingTop="10dp"
         android:id="@+id/user_self_def"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="25dp"
+<<<<<<< HEAD
         android:text="自定义"/>
+=======
+        android:text="submit"/>
+>>>>>>> dev
 
 </LinearLayout>

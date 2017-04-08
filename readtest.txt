@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 waedwwerwer
+=======
+waedwwerwer
+me add
+>>>>>>> dev

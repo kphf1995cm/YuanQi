@@ -7,9 +7,13 @@ import java.util.ArrayList;
  */
 
 public class DynamicContent {
-    public String account;
-    public String name;
+    public String account=null;
+    public String name=null;
     public ArrayList<String> content;
     public int likePersonNum=0;
     public ArrayList<String> likePersonAccount;
+    DynamicContent(){
+        content=new ArrayList<String>();
+        likePersonAccount=new ArrayList<String>();
+    }
 }

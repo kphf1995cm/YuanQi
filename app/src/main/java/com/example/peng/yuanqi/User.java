@@ -19,12 +19,12 @@ public class User {
     private String password=null;
     private HashSet<String> interset_list;
     private HashSet<String> friend_list;
-    private ArrayList<Content> content_list;
+    private ArrayList<DynamicContent> content_list;
     User()
     {
         interset_list=new HashSet<String>();
         friend_list=new HashSet<String>();
-        content_list=new ArrayList<Content>();
+        content_list=new ArrayList<DynamicContent>();
     }
 
     public void setName(String name) {
@@ -79,15 +79,14 @@ public class User {
         friend_list.remove(friend);
     }
 
-    public ArrayList<Content> getContent_list() {
+    public ArrayList<DynamicContent> getContent_list() {
         return content_list;
     }
 
-    public void AddUserContent(Content content)
+    public void AddUserContent(DynamicContent content)
     {
         content_list.add(content);
     }
-
 
 }
 

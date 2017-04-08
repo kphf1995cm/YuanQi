@@ -7,6 +7,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,7 +18,7 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static URL serverUrl;//服务器url
+    public static URL serverUrl=null;//服务器url
     public boolean isWebConnected = false;//网络状态
     public int userCurState = 0;//0，未登录，1，已登录
     public boolean isUserHeaderSetted = false;//用户头像是否已经被设置，头像存储在本地文件系统上
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     EditText userPassword = null;
     Button logIn = null;
     Button register = null;
+    public ConnectWebClass connectWebClass;
     public static User loginUser=new User();
 
     //public Drawable getLocalDrawable()｛
@@ -74,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 logIn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        loginResult = testUserAccountAndPassword(serverUrl, userAccount.getText().toString(), userPassword.getText().toString());//需要更改
+                        Log.d(userAccount.getText().toString(),userPassword.getText().toString());
+                        loginResult = connectWebClass.testUserAccountAndPassword(serverUrl, userAccount.getText().toString(), userPassword.getText().toString());//需要更改
                         if (loginResult == 0) {
 
                             loginUser.setAccount(userAccount.getText().toString());

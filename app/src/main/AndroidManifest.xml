@@ -24,6 +24,9 @@
         <activity android:name=".UserInfoCompleteActivity">
 
         </activity>
+        <activity android:name=".UserMessgeActivity">
+
+        </activity>
     </application>
 
 </manifest>

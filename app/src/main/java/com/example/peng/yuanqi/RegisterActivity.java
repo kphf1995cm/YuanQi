@@ -22,6 +22,15 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+
+import static android.graphics.Color.BLUE;
+import static android.graphics.Color.GRAY;
+import static android.graphics.Color.RED;
+import static android.graphics.Color.WHITE;
 
 /**
  * Created by peng on 2017/3/14.
@@ -33,6 +42,9 @@ public class RegisterActivity extends AppCompatActivity {
     ImageView userHeader;
     private final String IMAGE_TYPE = "image/*";
     private final int IMAGE_CODE = 0;
+    public ConnectWebClass connectWebClass=new ConnectWebClass();
+    public HashSet<String> interest_list=new HashSet<String>();
+    public HashMap<Integer,Integer> interestIdClickCount=new HashMap<Integer, Integer>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText userConfirmPassword = (EditText) findViewById(R.id.user_confirm_password);
         userHeader = (ImageView) findViewById(R.id.user_header);
         userHeader.setOnClickListener(listener);
+
         Button nextStep = (Button) findViewById(R.id.next_step);
         nextStep.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,27 +66,86 @@ public class RegisterActivity extends AppCompatActivity {
                 if (isPasswordSame(userInputPassword.getText().toString(), userConfirmPassword.getText().toString()) == false) {
                     Toast.makeText(RegisterActivity.this, "两次密码输入不一致", Toast.LENGTH_LONG).show();
                 } else {
-                    String userAccount=getUserAccount(serverUrl);
-                    importUserInfo(userAccount,userName.getText().toString(), userInputPassword.getText().toString(), serverUrl);
+                    final String userAccount=connectWebClass.getUserAccount(serverUrl);//从服务器端获取一个从未使用的账号
+                    //importUserInfo(userAccount,userName.getText().toString(), userInputPassword.getText().toString(), serverUrl);
+                    //将用户昵称，头像，密码存数据库
+                    connectWebClass.setUserPassword(serverUrl,userAccount,userInputPassword.getText().toString());
+                    connectWebClass.setUserName(serverUrl,userAccount,userInputPassword.getText().toString());
+                    connectWebClass.setUserHeader(serverUrl,userAccount,userHeader.getDrawable());
                     setContentView(R.layout.user_improve_information);
+                    final Button interest1,interest2,interest3;
+                    Button interest4,interest5,interest6;
+                    Button interest7,interest8,interest9;
+                    Button interest10,interest11,interest12;
+                    Button submit;
+                    interest1=(Button)findViewById(R.id.interest_1);
+                    interest2=(Button)findViewById(R.id.interest_2);
+                    interest3=(Button)findViewById(R.id.interest_3);
+                    interest4=(Button)findViewById(R.id.interest_4);
+                    interest5=(Button)findViewById(R.id.interest_5);
+                    interest6=(Button)findViewById(R.id.interest_6);
+                    interest7=(Button)findViewById(R.id.interest_7);
+                    interest8=(Button)findViewById(R.id.interest_8);
+                    interest9=(Button)findViewById(R.id.interest_9);
+                    interest10=(Button)findViewById(R.id.interest_10);
+                    interest11=(Button)findViewById(R.id.interest_11);
+                    interest12=(Button)findViewById(R.id.interest_12);
+                    submit=(Button)findViewById(R.id.submit);
+                    interest1.setOnClickListener(new MyClickListener());
+                    interest2.setOnClickListener(new MyClickListener());
+                    interest3.setOnClickListener(new MyClickListener());
+                    interest4.setOnClickListener(new MyClickListener());
+                    interest5.setOnClickListener(new MyClickListener());
+                    interest6.setOnClickListener(new MyClickListener());
+                    interest7.setOnClickListener(new MyClickListener());
+                    interest8.setOnClickListener(new MyClickListener());
+                    interest9.setOnClickListener(new MyClickListener());
+                    interest10.setOnClickListener(new MyClickListener());
+                    interest11.setOnClickListener(new MyClickListener());
+                    interest12.setOnClickListener(new MyClickListener());
+                    submit.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            for(String tmp:interest_list)
+                            {
+                                Log.d(tmp,tmp);
+                                System.out.print(tmp);
+                                connectWebClass.setUserInterestList(serverUrl,userAccount,interest_list);//设置用户兴趣列表
+                            }
+                        }
+                    });
+
                 }
                // }
             }
         });
     }
 
-    //判断账号是否存在，调数据库
-    private String getUserAccount(URL url)//获取用户的账号
-    {
-        String account="000000";
-        return account;
-    }
-    private boolean isPasswordSame(String str1, String str2) {
-        return str1.compareTo(str2) == 0;
+    class MyClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view)
+        {
+            Button b=(Button)findViewById(view.getId());
+            if (interestIdClickCount.containsKey(view.getId()) == false) {
+                interestIdClickCount.put(view.getId(), 1);
+                interest_list.add(b.getText().toString());
+                b.setBackgroundColor(BLUE);
+            } else {
+                if (interestIdClickCount.get(view.getId()) % 2 == 0) {
+                    interestIdClickCount.put(view.getId(), interestIdClickCount.get(view.getId()) + 1);
+                    interest_list.add(b.getText().toString());
+                    b.setBackgroundColor(BLUE);
+                } else {
+                    interest_list.remove(b.getText().toString());
+                    interestIdClickCount.put(view.getId(), interestIdClickCount.get(view.getId()) + 1);
+                    b.setBackgroundColor(GRAY);
+                }
+            }
+        }
     }
 
-    //将用户账号及密码导入数据库
-    private void importUserInfo(String account, String name,String password, URL url) {
+    private boolean isPasswordSame(String str1, String str2) {
+        return str1.compareTo(str2) == 0;
     }
 
     private View.OnClickListener listener = new View.OnClickListener() {

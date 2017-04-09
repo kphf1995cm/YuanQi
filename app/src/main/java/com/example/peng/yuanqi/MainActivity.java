@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     EditText userPassword = null;
     Button logIn = null;
     Button register = null;
-    public ConnectWebClass connectWebClass;
+    public ConnectWebClass connectWebClass=new ConnectWebClass();
     public static User loginUser=new User();
 
     //public Drawable getLocalDrawable()｛

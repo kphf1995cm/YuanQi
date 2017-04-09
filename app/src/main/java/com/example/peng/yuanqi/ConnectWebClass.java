@@ -1,6 +1,8 @@
 package com.example.peng.yuanqi;
 
+import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.preference.PreferenceActivity;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -38,7 +40,7 @@ public  class ConnectWebClass implements LinkWeb {
     }
 
     @Override
-    public void setUserHeader(URL url, String account, Image header) {
+    public void setUserHeader(URL url, String account, Drawable header) {
 
     }
 
@@ -63,14 +65,25 @@ public  class ConnectWebClass implements LinkWeb {
     }
 
     @Override
+    public void setUserInterestList(URL url, String account, HashSet<String> interest_list) {
+
+    }
+
+    @Override
     public void DeleteUserInterestItem(URL url, String account, String interest) {
 
     }
 
     @Override
-    public ArrayList<DynamicContent> getUserContent(URL url, String account) {
+    public ArrayList<DynamicContent> getUserShowContent(URL url, String account) {
         return null;
     }
+
+    @Override
+    public ArrayList<DynamicContent> getUserSendContent(URL url, String account) {
+        return null;
+    }
+
 
     @Override
     public void AddUserContentList(URL url, String account, DynamicContent content) {
@@ -79,6 +92,11 @@ public  class ConnectWebClass implements LinkWeb {
 
     @Override
     public void DeleteUserContentItem(URL url, String account, DynamicContent content) {
+
+    }
+
+    @Override
+    public void changeUserContentItem(URL url, String account, String send_time,String support_account) {
 
     }
 

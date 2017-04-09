@@ -17,13 +17,17 @@ public class User {
     private Image header=null;
     private String password=null;
     private HashSet<String> interset_list;
-    private ArrayList<FriendInfo> friend_list;
-    private ArrayList<DynamicContent> content_list;
+    private ArrayList<FriendInfo> friend_list;//朋友个人信息列表
+    private ArrayList<DynamicContent> content_list;//用户要显示的动态内容
+    private ArrayList<DynamicContent> send_content_list;//用户自己发布的动态内容
+    //private ArrayList<MessageContent> friend_info_list;/
+    private ArrayList<FriendComMessageInfo> friend_com_message_info_list;//朋友聊天记录列表
     User()
     {
         interset_list=new HashSet<String>();
         friend_list=new ArrayList<FriendInfo>();
         content_list=new ArrayList<DynamicContent>();
+        send_content_list=new ArrayList<DynamicContent>();
     }
 
     public void setAccount(String account) {
@@ -95,5 +99,12 @@ public class User {
         content_list.add(content);
     }
 
+    public ArrayList<DynamicContent> getSend_content_list() {
+        return send_content_list;
+    }
+
+    public void addSend_content_list(DynamicContent send_content_list) {
+        this.send_content_list.add(send_content_list);
+    }
 }
 

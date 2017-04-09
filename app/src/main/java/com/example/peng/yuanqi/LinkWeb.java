@@ -1,5 +1,6 @@
 package com.example.peng.yuanqi;
 
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 
 import java.net.URL;
@@ -20,7 +21,7 @@ public interface LinkWeb {
 
 
     public Image getUserHeader(URL url,String account); //获取用户头像
-    public void setUserHeader(URL url,String account,Image header); //设置用户头像
+    public void setUserHeader(URL url,String account,Drawable header); //设置用户头像
 
 
 
@@ -31,13 +32,19 @@ public interface LinkWeb {
 
     public HashSet<String> getUserInterestList(URL url, String account);//获取用户兴趣列表
     public void AddUserInterestList(URL url,String account,String interest);//在用户兴趣列表里面增加一项内容
+    public void setUserInterestList(URL url,String account,HashSet<String> interest_list);//添加用户兴趣列表
     public void DeleteUserInterestItem(URL url,String account,String interest);//在用户兴趣列表里面删除一项内容
 
 
 
-    public ArrayList<DynamicContent> getUserContent(URL url,String account); //获取用户发布的动态内容列表
+    public ArrayList<DynamicContent> getUserShowContent(URL url,String account); //获取用户要显示的动态内容列表（不是用户发布的，但需要显示在动态区的）
+    //可根据距离、时间、好友关系等来排列要显示的内容
+
+
+    public ArrayList<DynamicContent> getUserSendContent(URL url,String account); //获取用户发布的动态内容列表
     public void AddUserContentList(URL url,String account,DynamicContent content);//用户发布的动态内容里面增加一项内容
     public void DeleteUserContentItem(URL url,String account,DynamicContent content);//在用户发布的动态内容里面删除一项内容
+    public void changeUserContentItem(URL url,String account,String send_time,String support_account);//在用户发布的动态内容里面修改一项内容,增加点赞人的账号
 
 
 

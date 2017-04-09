@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.1"
-        sha1="27d1ce58ffac60a66efc717af8910946a163956a">
+        sha1="f75e709b0c839afb224f63ef189b0236a91f27f9">
         <dex dex="C:\ProjectsAndPrograms\AndroidStudioProjects\YuanQi\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eeca5c9bf7d9725c5c2bfc9319b60c382af5e072\classes.dex" />
     </item>
     <item

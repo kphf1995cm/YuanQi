@@ -107,6 +107,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="25dp"
+        android:text="definition"/>
+    <Button
+        android:layout_marginTop="40dp"
+        android:paddingTop="10dp"
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="25dp"
         android:text="SUBMIT"/>
 
 </LinearLayout>

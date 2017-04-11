@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffebef">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tvtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#ff1d1f1d"
+            android:text="2015年12月"
+            />
+        <ImageView
+            android:id="@+id/miv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/bg3"
+            android:layout_below="@+id/tvtime"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/miv"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ff333433"
+            android:background="@drawable/friend"
+            android:layout_marginRight="10dp"
+            android:layout_alignTop="@+id/miv" />
+    </RelativeLayout>
+</LinearLayout>

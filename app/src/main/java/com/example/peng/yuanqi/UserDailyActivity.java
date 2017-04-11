@@ -1,6 +1,7 @@
 package com.example.peng.yuanqi;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +30,8 @@ public class UserDailyActivity extends AppCompatActivity {
     public LayoutInflater layoutInflater;
     public MyAdapter myAdapter;
     public ConnectWebClass connectWebClass=new ConnectWebClass();
-    @Override
+    public Button friend,setting;
+   // @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_main);
@@ -40,9 +42,27 @@ public class UserDailyActivity extends AppCompatActivity {
         //user.AddUserContent(tpdc);
         dc_list=user.getContent_list();
         listView=(ListView)findViewById(R.id.dc_content_list_view);
+       // message=(Button) findViewById(R.id.main_message);
+        friend=(Button)findViewById(R.id.main_friend);
+        setting=(Button)findViewById(R.id.main_setting);
         layoutInflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         myAdapter=new MyAdapter();
         listView.setAdapter(myAdapter);
+
+        friend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UserDailyActivity.this,UserMessgeActivity.class);
+                startActivity(intent);
+            }
+        });
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(UserDailyActivity.this,UserSettingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void getUserInfoFromServer()//从服务器端获得用户信息
     {

@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
     //Drawable mydrawable=(Drawable)imageView.getDrawable();
     //    return mydrawable;
     //｝;//从本地文件系统中取出头像
-    public int testUserAccountAndPassword(URL url, String account, String password) {
-        return 0;
-    }
-
     //检测用户账号和密码是否存在及匹配,返回0，成功，1，账号不存在，2，密码错误
 
     public boolean isNetworkConnected(Context context) {
@@ -113,5 +109,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 }

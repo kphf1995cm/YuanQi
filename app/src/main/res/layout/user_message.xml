@@ -7,12 +7,40 @@
         android:id="@+id/message_content_list_view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="1"
+        android:layout_weight="8"
         android:divider="@null"
         android:listSelector="@android:color/transparent"
         android:transcriptMode="alwaysScroll"
         >
 
     </ListView>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="1dp">
+        <Button
+            android:layout_width="1dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="friend"
+            android:id="@+id/user_friend"
+            />
+        <Button
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="messge"
+        android:id="@+id/user_message"
+        />
+        <Button
+            android:layout_width="1dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="setting"
+            android:id="@+id/user_setting"
+            />
+    </LinearLayout>
 
 </LinearLayout>

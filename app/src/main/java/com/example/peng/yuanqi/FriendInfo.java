@@ -1,5 +1,6 @@
 package com.example.peng.yuanqi;
 
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 
 /**
@@ -7,10 +8,11 @@ import android.media.Image;
  */
 
 public class FriendInfo {
+
     private String account=null;
     private String name=null;
     private String lastComTime=null;
-    private Image Header=null;
+    private Drawable Header=null;
 
     public String getAccount() {
         return account;
@@ -27,11 +29,11 @@ public class FriendInfo {
         this.name = name;
     }
 
-    public Image getHeader() {
+    public Drawable getHeader() {
         return Header;
     }
 
-    public void setHeader(Image header) {
+    public void setHeader(Drawable header) {
         Header = header;
     }
 
@@ -42,4 +44,5 @@ public class FriendInfo {
     public void setLastComTime(String lastComTime) {
         this.lastComTime = lastComTime;
     }
+
 }

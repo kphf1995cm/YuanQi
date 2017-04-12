@@ -96,7 +96,7 @@ public  class ConnectWebClass implements LinkWeb {
     }
 
     @Override
-    public void changeUserContentItem(URL url, String account, String send_time,String support_account) {
+    public void changeUserContentItem(URL url, String account, String send_time,String support_account) {//在用户发布的动态内容里面修改一项内容,增加点赞人的账号
 
     }
 

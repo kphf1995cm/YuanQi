@@ -14,6 +14,13 @@ public class FriendInfo {
     private String lastComTime=null;
     private Drawable Header=null;
 
+    public void setAllInfo(String account,String name,String lastComTime,Drawable header)
+    {
+        this.account=account;
+        this.name=name;
+        this.lastComTime=lastComTime;
+        this.Header=header;
+    }
     public String getAccount() {
         return account;
     }

@@ -20,7 +20,7 @@
             android:id="@+id/miv"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/bg3"
+            android:src="@drawable/ic_launcher"
             android:layout_below="@+id/tvtime"
             android:layout_marginLeft="10dp"
             />
@@ -33,7 +33,7 @@
             android:layout_toRightOf="@+id/miv"
             android:layout_marginLeft="5dp"
             android:textColor="#ff333433"
-            android:background="@drawable/friend"
+            android:src="@drawable/ic_launcher"
             android:layout_marginRight="10dp"
             android:layout_alignTop="@+id/miv" />
     </RelativeLayout>

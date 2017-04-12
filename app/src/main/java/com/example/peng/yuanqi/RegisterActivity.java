@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -49,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.user_register);
         final EditText userName = (EditText) findViewById(R.id.user_name);
         final EditText userInputPassword = (EditText) findViewById(R.id.user_input_password);
@@ -77,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Button interest4,interest5,interest6;
                     Button interest7,interest8,interest9;
                     Button interest10,interest11,interest12;
-                    Button submit;
+                    Button submit,definition;
                     interest1=(Button)findViewById(R.id.interest_1);
                     interest2=(Button)findViewById(R.id.interest_2);
                     interest3=(Button)findViewById(R.id.interest_3);
@@ -91,6 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                     interest11=(Button)findViewById(R.id.interest_11);
                     interest12=(Button)findViewById(R.id.interest_12);
                     submit=(Button)findViewById(R.id.submit);
+                    definition=(Button)findViewById(R.id.user_self_def);
                     interest1.setOnClickListener(new MyClickListener());
                     interest2.setOnClickListener(new MyClickListener());
                     interest3.setOnClickListener(new MyClickListener());
@@ -109,9 +112,21 @@ public class RegisterActivity extends AppCompatActivity {
                             for(String tmp:interest_list)
                             {
                                 Log.d(tmp,tmp);
-                                System.out.print(tmp);
-                                connectWebClass.setUserInterestList(serverUrl,userAccount,interest_list);//设置用户兴趣列表
+                                //System.out.print(tmp);
+
                             }
+                            connectWebClass.setUserInterestList(serverUrl,userAccount,interest_list);//设置用户兴趣列表
+                           // Intent intent=new Intent();//注册完了之后回到用户登陆界面，进入MainActivity Onresume函数
+                           // intent.setAction(Intent.ACTION_MAIN);
+                           // intent.addCategory(Intent.CATEGORY_LAUNCHER);
+                           // startActivity(intent);
+                            finish();
+                        }
+                    });
+                    definition.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            //用户自定义兴趣点
                         }
                     });
 

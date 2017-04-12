@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -25,20 +26,34 @@ public class UserMessgeActivity extends AppCompatActivity {
     public ListView messageList;
     public ArrayList<FriendInfo> messageContentList=new ArrayList<FriendInfo>();
     public LayoutInflater layoutInflater;
-    public MyAdapter myAdapter;
+    public FriendAdapter friendAdapter;
     public Button message,setting;
+    public Button addFriend;
+    public User muser=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.user_message);
         messageList=(ListView)findViewById(R.id.message_content_list_view);
         message=(Button)findViewById(R.id.user_message);
         setting=(Button)findViewById(R.id.user_setting);
+        addFriend=(Button)findViewById(R.id.add_friend);
         layoutInflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        myAdapter=new MyAdapter();
-        messageList.setAdapter(myAdapter);
+        muser=MainActivity.loginUser;
+        friendAdapter=new FriendAdapter();
+        FriendInfo tfi=new FriendInfo();
+        tfi.setAllInfo(muser.getAccount(),"Bob","3-19",null);
+        messageContentList.add(tfi);
+        FriendInfo ttfi=new FriendInfo();
+        ttfi.setAllInfo(muser.getAccount(),"www","4-19",null);
+        messageContentList.add(ttfi);
+        FriendInfo tttfi=new FriendInfo();
+        tttfi.setAllInfo(muser.getAccount(),"bbb","1-19",null);
+        messageContentList.add(tttfi);
+        messageList.setAdapter(friendAdapter);
         message.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,9 +68,15 @@ public class UserMessgeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        addFriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //添加一个朋友账号
+            }
+        });
     }
 
-    public class MyAdapter extends BaseAdapter
+    public class FriendAdapter extends BaseAdapter
     {
         @Override
         public int getCount() {
@@ -74,7 +95,7 @@ public class UserMessgeActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            FriendInfo tempcontact=messageContentList.get(position);
+            final FriendInfo tempcontact=messageContentList.get(position);
             convertView=null;
             if(convertView==null)
             {
@@ -89,8 +110,12 @@ public class UserMessgeActivity extends AppCompatActivity {
                 friendItem.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
+                        MainActivity.curContactPersonAccount=tempcontact.getName();//先用getName测试
+                        //MainActivity.curContactPersonAccount=tempcontact.getAccount();//保存当前聊天人的账号
                         Intent intent=new Intent(UserMessgeActivity.this,ContactInterfaceActivity.class);
                         startActivity(intent);
+
                     }
                 });
             }

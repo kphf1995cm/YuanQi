@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.peng.yuanqi">
 
-    <uses-sdk android:minSdkVersion="19"
-              android:targetSdkVersion="22"/>
+    <uses-sdk android:minSdkVersion="22"
+              android:targetSdkVersion="25"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,8 +13,8 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME"/>
             </intent-filter>
         </activity>
         <activity android:name=".UserDailyActivity">
@@ -33,6 +33,7 @@
         <activity android:name=".UserSettingActivity">
 
         </activity>
+        <activity android:name=".EditContentActivity"></activity>
     </application>
 
 </manifest>

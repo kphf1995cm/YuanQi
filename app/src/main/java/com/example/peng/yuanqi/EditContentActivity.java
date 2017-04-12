@@ -8,6 +8,8 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Date;
+
 /**
  * Created by peng on 2017/4/12.
  */
@@ -29,12 +31,13 @@ public class EditContentActivity extends AppCompatActivity {
                 euser=MainActivity.loginUser;
                 SimpleDateFormat simpleDateFormat= null;
                 String date;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                /*if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                     simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
                     date=simpleDateFormat.format(new java.util.Date());
                 }
                 else
-                   date="API Lower";
+                   date="API Lower";*/
+                date=GetTime();
                 DynamicContent dynamicContent=new DynamicContent();
                 dynamicContent.setAccount(euser.getAccount());
                 dynamicContent.setDynamicShowContent(euser.getName(),edit_content.getText().toString(),date,euser.getHeader());
@@ -43,5 +46,13 @@ public class EditContentActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    public String GetTime()
+    {
+
+        Date date=new Date();
+        java.text.SimpleDateFormat nowTime=new java.text.SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 E ");
+        String str=nowTime.format(date);
+        return str;
     }
 }

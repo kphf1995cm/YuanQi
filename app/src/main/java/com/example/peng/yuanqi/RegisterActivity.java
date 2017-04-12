@@ -74,6 +74,9 @@ public class RegisterActivity extends AppCompatActivity {
                     connectWebClass.setUserPassword(serverUrl,userAccount,userInputPassword.getText().toString());
                     connectWebClass.setUserName(serverUrl,userAccount,userInputPassword.getText().toString());
                     connectWebClass.setUserHeader(serverUrl,userAccount,userHeader.getDrawable());
+                    //用户头像得存储在本地和数据库上
+                    //存储在本地还得实现
+                    MainActivity.loginUser.setHeader(userHeader.getDrawable());
                     setContentView(R.layout.user_improve_information);
                     final Button interest1,interest2,interest3;
                     Button interest4,interest5,interest6;

@@ -20,7 +20,7 @@ public interface LinkWeb {
     public void setUserName(URL url,String account,String name);//设置用户昵称
 
 
-    public Image getUserHeader(URL url,String account); //获取用户头像
+    public Drawable getUserHeader(URL url,String account); //获取用户头像
     public void setUserHeader(URL url,String account,Drawable header); //设置用户头像
 
 

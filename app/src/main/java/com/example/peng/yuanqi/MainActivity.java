@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private int loginResult;//登录成功或失败的结果
     EditText userAccount = null;
     EditText userPassword = null;
+    ImageView userHeader=null;
     Button logIn = null;
     Button register = null;
     public static String curContactPersonAccount=null;
@@ -66,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
                 setContentView(R.layout.user_login);
                 userAccount = (EditText) findViewById(R.id.user_account);
                 userPassword = (EditText) findViewById(R.id.user_password);
+                userHeader=(ImageView)findViewById(R.id.user_header);
+
+                //从本地获取用户头像 未写
+                //if(loginUser.getHeader()!=null)
+                  //  userHeader.setImageDrawable(loginUser.getHeader());
+
                 logIn = (Button) findViewById(R.id.login_in);
                 register = (Button) findViewById(R.id.register);
                 if (isUserHeaderSetted) {
@@ -113,5 +120,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }
+    }
+
+    @Override
+    protected void onRestart()//注册后回来时，头像已设置，得更改
+    {
+        if(loginUser.getHeader()!=null);
+            //userHeader.setImageDrawable(loginUser.getHeader());
+        
     }
 }

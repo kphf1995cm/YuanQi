@@ -35,7 +35,7 @@ public  class ConnectWebClass implements LinkWeb {
     }
 
     @Override
-    public Image getUserHeader(URL url, String account) {
+    public Drawable getUserHeader(URL url, String account) {
         return null;
     }
 

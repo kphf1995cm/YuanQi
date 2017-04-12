@@ -7,12 +7,14 @@ package com.example.peng.yuanqi;
 public class TalkContent {
     private String content=null;
     private String time=null;
+    private int sendFlag;//发送者标识符 自己发送为1，朋友发送为2
     public TalkContent(){}
 
-    public TalkContent(String content,String time)
+    public TalkContent(String content,String time,int sendFlag)
     {
         this.content=content;
         this.time=time;
+        this.sendFlag=sendFlag;
     }
 
     public String getContent() {
@@ -29,5 +31,13 @@ public class TalkContent {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public int getSendFlag() {
+        return sendFlag;
+    }
+
+    public void setSendFlag(int sendFlag) {
+        this.sendFlag = sendFlag;
     }
 }

@@ -18,6 +18,7 @@ public interface LinkWeb {
 
     public String getUserName(URL url,String account);//获取用户昵称
     public void setUserName(URL url,String account,String name);//设置用户昵称
+    public boolean testAccountExist(URL url,String account);//存在返回true，不存在返回false
 
 
     public Drawable getUserHeader(URL url,String account); //获取用户头像

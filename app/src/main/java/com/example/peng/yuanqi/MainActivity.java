@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
                             loginUser.setAccount(userAccount.getText().toString());
                             loginUser.setPassword(userPassword.getText().toString());
+                            loginUser.setHeader(userHeader.getDrawable());
                             userCurState = 1;//修改用户状态，已登录
                             Intent intent = new Intent(MainActivity.this, UserDailyActivity.class);
                             startActivity(intent);
@@ -122,11 +123,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
+    /*@Override
     protected void onRestart()//注册后回来时，头像已设置，得更改
     {
         if(loginUser.getHeader()!=null);
             //userHeader.setImageDrawable(loginUser.getHeader());
-        
-    }
+
+    }*/
 }

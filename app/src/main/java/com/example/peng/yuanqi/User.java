@@ -14,6 +14,7 @@ import java.util.HashSet;
  * Created by CloudsRosy on 2017/4/5.
  */
 public class User {
+
     private String account=null;
     private String name=null;
     private Drawable header=null;
@@ -24,6 +25,7 @@ public class User {
     private ArrayList<DynamicContent> send_content_list;//用户自己发布的动态内容
     //private ArrayList<MessageContent> friend_info_list;/
     private HashMap<String,ArrayList<TalkContent>> friend_talk_content_list_map=null;//朋友聊天记录列表,存储在本地
+
     User()
     {
         interset_list=new HashSet<String>();
@@ -31,6 +33,7 @@ public class User {
         content_list=new ArrayList<DynamicContent>();
         send_content_list=new ArrayList<DynamicContent>();
     }
+
     public ArrayList<TalkContent> getTalkContentList(String friendAccount)
     {
         if(friend_talk_content_list_map!=null)
@@ -66,6 +69,7 @@ public class User {
     }
 
     public void saveTalkContentListMap(){}
+
     public void getTalkContentListMap(){
         if(friend_talk_content_list_map==null);
     }//从本地获取聊天记录
@@ -146,5 +150,6 @@ public class User {
     public void addSend_content_list(DynamicContent send_content_list) {
         this.send_content_list.add(send_content_list);
     }
+
 }
 

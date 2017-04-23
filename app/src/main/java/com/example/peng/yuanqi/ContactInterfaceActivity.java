@@ -1,5 +1,6 @@
 package com.example.peng.yuanqi;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,8 +32,8 @@ public class ContactInterfaceActivity extends AppCompatActivity {
     public Button send;
     public EditText edit;
     public LayoutInflater layoutInflater;
-    public Drawable friendHeader=null;//朋友头像
-    public Drawable userHeader=null;//自己头像
+    public Drawable friendHeader;//朋友头像
+    public Drawable userHeader;//自己头像
     public MyAdapter myAdapter;
    // public User user;
 
@@ -46,6 +47,7 @@ public class ContactInterfaceActivity extends AppCompatActivity {
         talkContents=MainActivity.loginUser.getTalkContentList(MainActivity.curContactPersonAccount);
         userHeader=MainActivity.loginUser.getHeader();
         friendHeader=MainActivity.connectWebClass.getUserHeader(MainActivity.serverUrl,MainActivity.curContactPersonAccount);
+        friendHeader=MainActivity.loginUser.getHeader();
         if(talkContents==null)
             talkContents=new ArrayList<TalkContent>();
         talkContents.add(new TalkContent("Hello",GetTime(),1));
@@ -56,6 +58,7 @@ public class ContactInterfaceActivity extends AppCompatActivity {
         listView=(ListView)findViewById(R.id.contact_listview);
         send=(Button)findViewById(R.id.contact_send);
         edit=(EditText) findViewById(R.id.contact_edit);
+        layoutInflater=(LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         myAdapter=new MyAdapter();
         listView.setAdapter(myAdapter);
         listView.setSelection(listView.getBottom());
@@ -106,8 +109,10 @@ public class ContactInterfaceActivity extends AppCompatActivity {
             convertView=null;
             if(convertView==null)
             {
-                if(tempcontact.getSendFlag()==1){convertView=layoutInflater.inflate(R.layout.right_person,parent,false);}
-                else if(tempcontact.getSendFlag()==2){convertView=layoutInflater.inflate(R.layout.left_person,parent,false);}
+                if(tempcontact.getSendFlag()==1)
+                {convertView=layoutInflater.inflate(R.layout.right_person,parent,false);}
+                else if(tempcontact.getSendFlag()==2)
+                {convertView=layoutInflater.inflate(R.layout.left_person,parent,false);}
                 TextView tv=(TextView) convertView.findViewById(R.id.tv);
                 TextView tvtime=(TextView) convertView.findViewById(R.id.tvtime);
                 ImageView header=(ImageView)convertView.findViewById(R.id.header);

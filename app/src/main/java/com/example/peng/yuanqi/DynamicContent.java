@@ -15,6 +15,7 @@ public class DynamicContent {
     private String content;
     private String time;
     private Drawable header;
+
     private ArrayList<String> praisePersonAccount=new ArrayList<String>();
 
     public void setDynamicShowContent(String name,String content,String time,Drawable header)

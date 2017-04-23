@@ -18,8 +18,8 @@
             />
         <ImageView
             android:id="@+id/header"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:src="@drawable/ic_launcher"
             android:layout_below="@+id/tvtime"
             android:layout_marginLeft="10dp"
@@ -28,13 +28,14 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
+            android:textSize="20dp"
             android:gravity="center"
-            android:layout_toRightOf="@+id/miv"
-            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/header"
+            android:layout_marginLeft="8dp"
             android:textColor="#ff333433"
             android:src="@drawable/ic_launcher"
             android:layout_marginRight="10dp"
-            android:layout_alignTop="@+id/miv" />
+            android:text="hello"
+            android:layout_alignTop="@+id/header" />
     </RelativeLayout>
 </LinearLayout>

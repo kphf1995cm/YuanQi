@@ -44,10 +44,10 @@ public class UserDailyActivity extends AppCompatActivity {
         user=MainActivity.loginUser;//获得用户信息
         getUserInfoFromServer();
         DynamicContent tpdc=new DynamicContent();
-        tpdc.setDynamicShowContent("new","hello","2017",null);
+        tpdc.setDynamicShowContent("new","hello","2017",MainActivity.loginUser.getHeader());
        // user.AddUserContent(tpdc);
         DynamicContent tpd=new DynamicContent();
-        tpd.setDynamicShowContent("ddd","hghlo","2017",null);
+        tpd.setDynamicShowContent("ddd","hghlo","2017",MainActivity.loginUser.getHeader());
        // user.AddUserContent(tpd);
         dc_list=user.getContent_list();
         if(dc_list==null)

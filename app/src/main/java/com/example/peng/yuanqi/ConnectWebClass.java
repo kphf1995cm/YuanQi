@@ -35,6 +35,11 @@ public  class ConnectWebClass implements LinkWeb {
     }
 
     @Override
+    public boolean testAccountExist(URL url, String account) {
+        return false;
+    }
+
+    @Override
     public Drawable getUserHeader(URL url, String account) {
         return null;
     }

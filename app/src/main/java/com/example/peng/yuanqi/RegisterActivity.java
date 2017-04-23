@@ -63,78 +63,82 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //if (isTheNameExist(userName.getText().toString(), serverUrl)) {
-               //     Toast.makeText(RegisterActivity.this, "该昵称已被使用", Toast.LENGTH_LONG).show();
-               // } else {
+                //     Toast.makeText(RegisterActivity.this, "该昵称已被使用", Toast.LENGTH_LONG).show();
+                // } else {
                 if (isPasswordSame(userInputPassword.getText().toString(), userConfirmPassword.getText().toString()) == false) {
                     Toast.makeText(RegisterActivity.this, "两次密码输入不一致", Toast.LENGTH_LONG).show();
+                    userConfirmPassword.setText("");
                 } else {
-                    final String userAccount=connectWebClass.getUserAccount(serverUrl);//从服务器端获取一个从未使用的账号
+                    //final String userAccount=connectWebClass.getUserAccount(serverUrl);//从服务器端获取一个从未使用的账号
                     //importUserInfo(userAccount,userName.getText().toString(), userInputPassword.getText().toString(), serverUrl);
                     //将用户昵称，头像，密码存数据库
-                    connectWebClass.setUserPassword(serverUrl,userAccount,userInputPassword.getText().toString());
-                    connectWebClass.setUserName(serverUrl,userAccount,userInputPassword.getText().toString());
-                    connectWebClass.setUserHeader(serverUrl,userAccount,userHeader.getDrawable());
-                    //用户头像得存储在本地和数据库上
-                    //存储在本地还得实现
-                    MainActivity.loginUser.setHeader(userHeader.getDrawable());
-                    setContentView(R.layout.user_improve_information);
-                    final Button interest1,interest2,interest3;
-                    Button interest4,interest5,interest6;
-                    Button interest7,interest8,interest9;
-                    Button interest10,interest11,interest12;
-                    Button submit,definition;
-                    interest1=(Button)findViewById(R.id.interest_1);
-                    interest2=(Button)findViewById(R.id.interest_2);
-                    interest3=(Button)findViewById(R.id.interest_3);
-                    interest4=(Button)findViewById(R.id.interest_4);
-                    interest5=(Button)findViewById(R.id.interest_5);
-                    interest6=(Button)findViewById(R.id.interest_6);
-                    interest7=(Button)findViewById(R.id.interest_7);
-                    interest8=(Button)findViewById(R.id.interest_8);
-                    interest9=(Button)findViewById(R.id.interest_9);
-                    interest10=(Button)findViewById(R.id.interest_10);
-                    interest11=(Button)findViewById(R.id.interest_11);
-                    interest12=(Button)findViewById(R.id.interest_12);
-                    submit=(Button)findViewById(R.id.submit);
-                    definition=(Button)findViewById(R.id.user_self_def);
-                    interest1.setOnClickListener(new MyClickListener());
-                    interest2.setOnClickListener(new MyClickListener());
-                    interest3.setOnClickListener(new MyClickListener());
-                    interest4.setOnClickListener(new MyClickListener());
-                    interest5.setOnClickListener(new MyClickListener());
-                    interest6.setOnClickListener(new MyClickListener());
-                    interest7.setOnClickListener(new MyClickListener());
-                    interest8.setOnClickListener(new MyClickListener());
-                    interest9.setOnClickListener(new MyClickListener());
-                    interest10.setOnClickListener(new MyClickListener());
-                    interest11.setOnClickListener(new MyClickListener());
-                    interest12.setOnClickListener(new MyClickListener());
-                    submit.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            for(String tmp:interest_list)
-                            {
-                                Log.d(tmp,tmp);
-                                //System.out.print(tmp);
-
+                    if (connectWebClass.testAccountExist(serverUrl, userName.getText().toString())) {
+                        Toast.makeText(RegisterActivity.this, "该用户名已存在", Toast.LENGTH_LONG).show();
+                        userName.setText("");
+                    } else {
+                        connectWebClass.setUserPassword(serverUrl, userName.getText().toString(), userInputPassword.getText().toString());
+                        //connectWebClass.setUserName(serverUrl,userAccount,userInputPassword.getText().toString());
+                        connectWebClass.setUserHeader(serverUrl, userName.getText().toString(), userHeader.getDrawable());
+                        //用户头像得存储在本地和数据库上
+                        //存储在本地还得实现
+                        MainActivity.loginUser.setHeader(userHeader.getDrawable());
+                        setContentView(R.layout.user_improve_information);
+                        final Button interest1, interest2, interest3;
+                        Button interest4, interest5, interest6;
+                        Button interest7, interest8, interest9;
+                        Button interest10, interest11, interest12;
+                        Button submit, definition;
+                        interest1 = (Button) findViewById(R.id.interest_1);
+                        interest2 = (Button) findViewById(R.id.interest_2);
+                        interest3 = (Button) findViewById(R.id.interest_3);
+                        interest4 = (Button) findViewById(R.id.interest_4);
+                        interest5 = (Button) findViewById(R.id.interest_5);
+                        interest6 = (Button) findViewById(R.id.interest_6);
+                        interest7 = (Button) findViewById(R.id.interest_7);
+                        interest8 = (Button) findViewById(R.id.interest_8);
+                        interest9 = (Button) findViewById(R.id.interest_9);
+                        interest10 = (Button) findViewById(R.id.interest_10);
+                        interest11 = (Button) findViewById(R.id.interest_11);
+                        interest12 = (Button) findViewById(R.id.interest_12);
+                        submit = (Button) findViewById(R.id.submit);
+                        definition = (Button) findViewById(R.id.user_self_def);
+                        interest1.setOnClickListener(new MyClickListener());
+                        interest2.setOnClickListener(new MyClickListener());
+                        interest3.setOnClickListener(new MyClickListener());
+                        interest4.setOnClickListener(new MyClickListener());
+                        interest5.setOnClickListener(new MyClickListener());
+                        interest6.setOnClickListener(new MyClickListener());
+                        interest7.setOnClickListener(new MyClickListener());
+                        interest8.setOnClickListener(new MyClickListener());
+                        interest9.setOnClickListener(new MyClickListener());
+                        interest10.setOnClickListener(new MyClickListener());
+                        interest11.setOnClickListener(new MyClickListener());
+                        interest12.setOnClickListener(new MyClickListener());
+                        submit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                for (String tmp : interest_list) {
+                                    Log.d(tmp, tmp);
+                                    //System.out.print(tmp);
+                                }
+                                connectWebClass.setUserInterestList(serverUrl, userName.getText().toString(), interest_list);//设置用户兴趣列表
+                                // Intent intent=new Intent();//注册完了之后回到用户登陆界面，进入MainActivity Onresume函数
+                                // intent.setAction(Intent.ACTION_MAIN);
+                                // intent.addCategory(Intent.CATEGORY_LAUNCHER);
+                                // startActivity(intent);
+                                finish();
                             }
-                            connectWebClass.setUserInterestList(serverUrl,userAccount,interest_list);//设置用户兴趣列表
-                           // Intent intent=new Intent();//注册完了之后回到用户登陆界面，进入MainActivity Onresume函数
-                           // intent.setAction(Intent.ACTION_MAIN);
-                           // intent.addCategory(Intent.CATEGORY_LAUNCHER);
-                           // startActivity(intent);
-                            finish();
-                        }
-                    });
-                    definition.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            //用户自定义兴趣点
-                        }
-                    });
+                        });
+                        definition.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                //用户自定义兴趣点
+                            }
+                        });
 
+                    }
                 }
-               // }
+                // }
             }
         });
     }

@@ -45,13 +45,13 @@ public class UserMessgeActivity extends AppCompatActivity {
         muser=MainActivity.loginUser;
         friendAdapter=new FriendAdapter();
         FriendInfo tfi=new FriendInfo();
-        tfi.setAllInfo(muser.getAccount(),"Bob","3-19",null);
+        tfi.setAllInfo(muser.getAccount(),"Bob","3-19",MainActivity.loginUser.getHeader());
         messageContentList.add(tfi);
         FriendInfo ttfi=new FriendInfo();
-        ttfi.setAllInfo(muser.getAccount(),"www","4-19",null);
+        ttfi.setAllInfo(muser.getAccount(),"www","4-19",MainActivity.loginUser.getHeader());
         messageContentList.add(ttfi);
         FriendInfo tttfi=new FriendInfo();
-        tttfi.setAllInfo(muser.getAccount(),"bbb","1-19",null);
+        tttfi.setAllInfo(muser.getAccount(),"bbb","1-19",MainActivity.loginUser.getHeader());
         messageContentList.add(tttfi);
         messageList.setAdapter(friendAdapter);
         message.setOnClickListener(new View.OnClickListener() {

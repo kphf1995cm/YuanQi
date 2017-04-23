@@ -16,7 +16,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="+C"
+            android:drawableTop="@drawable/more_chat"
+            android:background="@drawable/tabbar_bg_selector"
             android:id="@+id/add_content"
             />
     </LinearLayout>
@@ -35,6 +36,7 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:background="@drawable/tabbar_bg_nor"
         android:layout_height="1dp">
         <Button
             android:layout_width="1dp"
@@ -42,21 +44,34 @@
             android:layout_height="match_parent"
             android:text="friend"
             android:id="@+id/main_friend"
-
+            android:textColor="@color/tab_text"
+            android:background="@drawable/tabbar_bg_selector"
+            android:drawableTop="@drawable/tab_buddy_selector"
+            style="@style/tab_btn"
             />
+
         <Button
             android:layout_width="1dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="message"
+            android:textColor="@color/tab_text"
+            android:background="@drawable/tabbar_bg_selector"
+            android:drawableTop="@drawable/tab_recent_selector"
             android:id="@+id/main_message"
+            style="@style/tab_btn"
             />
+
         <Button
             android:layout_width="1dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="setting"
             android:id="@+id/main_setting"
+            android:textColor="@color/tab_text"
+            android:background="@drawable/tabbar_bg_selector"
+            android:drawableTop="@drawable/tab_more_selector"
+            style="@style/tab_btn"
             />
     </LinearLayout>
 
